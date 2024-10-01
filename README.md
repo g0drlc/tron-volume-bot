@@ -1,31 +1,69 @@
+Here’s a well-organized README file for your **Tron Volume Bot** repo based on the provided content:
 
-# solid trex bot 
+---
 
+# Tron Volume Bot
 
+This is a **Tron volume bot** designed to automate trades on the Tron blockchain, leveraging **Jupiter** and **Jito bundle** for optimized transactions. 
 
-1. `python -m venv venv ` 
+## Setup Instructions
 
-2. 
-- for linux: 
-    `source venv/bin/activate`
-- for windows:
-    `.\venv\Scripts\activate.bat`
+1. **Create a virtual environment**  
+   ```bash
+   python -m venv venv
+   ```
 
-3. `pip install -r requirements.txt`
+2. **Activate the virtual environment**  
+   - For Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+   - For Windows:
+     ```bash
+     .\venv\Scripts\activate.bat
+     ```
 
-4. `python solid_trex.py`
+3. **Install the required dependencies**  
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-#### If you want to use this bot on the main grid, you need to get and enter the api key from https://www.trongrid.io/. But there is no need to enter the api key in the testnet network (demo mode).
+4. **Run the bot**  
+   ```bash
+   python solid_trex.py
+   ```
 
+### TronGrid API Key
 
-Inside this folder there is a file called trx_sender.py
-Using this file, you can send all the trons in the wallets to the main address, and you just need to give it the name of the created wallet file to send the trons balance of all the wallets in that file to the address you want. If you need to send it, you can use it with the command: python trx_sender.py and at the input it will take the address of the wallet you want to send to, and then it will ask you to enter the name of the file where the wallets are, for example : wallets1.txt and finally sends all the trx in the wallets in the file wallets1.txt to the address you want
+To run this bot on the **mainnet**, you will need an API key from [TronGrid.io](https://www.trongrid.io/).  
+You can run the bot on the testnet (demo mode) without an API key.
 
+## Additional Functionality: TRX Sender
 
-***Please enter a minimum delay of 10 seconds, otherwise the bot may give an error***
+Inside this folder, there is a file called `trx_sender.py`, which allows you to send all TRX from multiple wallets to a specific address.  
+To use it, run the following command:
 
+```bash
+python trx_sender.py
+```
 
-Please be careful when entering the min_trade_amount and max_trade_amount values ​​so that the robot does not make an error when buying and selling (always consider the minimums in the exchanges and be sure to run it on the testnet network before running this robot on the mainnet)
+### Steps:
+- Input the **main address** where you want to send the TRX.
+- Enter the **name of the wallet file** (e.g., `wallets1.txt`).  
+  This file should contain the wallet addresses you want to transfer the TRX from.
 
+The bot will then transfer the TRX from all the wallets listed in the file to your specified main address.
 
-# Warning: You are responsible for any loss of capital when using the robot.
+## Important Notes
+
+- Enter a **minimum delay of 10 seconds** between trades to avoid errors.
+- Be cautious when setting the `min_trade_amount` and `max_trade_amount` to prevent execution errors. Always refer to the minimum trade requirements of the exchanges.
+- **Testnet mode** is highly recommended before running the bot on the mainnet to ensure correct functionality.
+
+## Disclaimer
+
+⚠️ **Warning**: You are solely responsible for any loss of capital when using this bot. Please use it at your own risk.
+
+---
+
+Let me know if you’d like to add or change anything!
